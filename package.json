@@ -1,0 +1,36 @@
+{
+  "name": "kap-kdrive",
+  "version": "1.0.0",
+  "description": "Upload Screencast to your Infomaniak drive",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .js .",
+    "lint-fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infomaniak/kap-kdrive.git"
+  },
+  "bugs": {
+    "url": "https://github.com/infomaniak/kap-kdrive/issues"
+  },
+  "keywords": [
+    "kap-plugin"
+  ],
+  "author": "infomaniak",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.2",
+    "url-join": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
