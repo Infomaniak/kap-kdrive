@@ -3,7 +3,8 @@ const request = require('request');
 const path = require('path');
 
 const share = (context, filePath) => {
-  const target = join(context.config.get('path') + path.basename(filePath));
+  const folder = context.config.get('path');
+  const target = join((folder ? folder.replace(/\/?$/, '/') : '') + path.basename(filePath));
   const headers = { 'OCS-APIRequest': 'true' };
   const shareUrl = join(context.config.get('url'), '/ocs/v2.php/apps/files_sharing/api/v1/shares');
   const auth = { username: context.config.get('username'), password: context.config.get('password') };

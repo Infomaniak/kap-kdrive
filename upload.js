@@ -5,7 +5,8 @@ const request = require('request');
 const share = require('./share');
 
 const upload = (context, filePath) => {
-  const target = join(context.config.get('path') + path.basename(filePath));
+  const folder = context.config.get('path');
+  const target = join((folder ? folder.replace(/\/?$/, '/') : '') + path.basename(filePath));
   const uploadUrl = join(context.config.get('url'), '/remote.php/webdav/', encodeURI(target));
   const auth = { username: context.config.get('username'), password: context.config.get('password') };
   const { size } = fs.statSync(filePath);
